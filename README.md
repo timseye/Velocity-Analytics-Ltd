@@ -16,3 +16,56 @@ Home advantage statistical evaluation
 Historical championship competitiveness trends
 
 The dataset: https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020
+
+---
+
+## Screenshot (placeholder)
+Add a screenshot of your main analytics dashboard here (assets/your-screenshot.png).
+
+## ER Diagram (placeholder)
+Add your ER diagram to assets/ (e.g., assets/er-diagram.png) and reference it here.
+
+## How to run
+
+Prereqs: PostgreSQL running and loaded with the F1 dataset; Python 3.10+ installed.
+
+1) Configure database environment
+- Copy `.env` values (or edit the existing `.env`) with your DB credentials: `DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASSWORD`, `DB_PORT`.
+
+2) Install Python dependencies
+```powershell
+py -m pip install -r requirements.txt
+```
+
+3) Verify DB connection
+```powershell
+py connection.py
+```
+
+4) Run sample analytics (executes first queries from `queries.sql`)
+```powershell
+py main.py
+```
+
+## Apache Superset (Docker-based)
+If you cloned Superset into `C:\Users\tima\superset` and use Docker Compose:
+
+Start (from any folder):
+```powershell
+docker compose -f "C:\Users\tima\superset\docker-compose-image-tag.yml" up -d
+```
+
+Stop:
+```powershell
+docker compose -f "C:\Users\tima\superset\docker-compose-image-tag.yml" down
+```
+
+After Superset is up, connect your Postgres DB using this SQLAlchemy URI format in Superset:
+```
+postgresql+psycopg2://DB_USER:DB_PASSWORD@DB_HOST:DB_PORT/DB_NAME
+```
+
+## Tools and resources
+- PostgreSQL, Python 3.10+, Apache Superset (Docker)
+- Python libs: `psycopg2-binary`, `python-dotenv`
+- Dataset: Formula 1 World Championship (Kaggle)
