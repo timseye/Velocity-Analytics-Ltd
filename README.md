@@ -19,11 +19,13 @@ The dataset: https://www.kaggle.com/datasets/rohanrao/formula-1-world-championsh
 
 ---
 
-## Screenshot (placeholder)
-Add a screenshot of your main analytics dashboard here (assets/your-screenshot.png).
+## Main Analytics Screenshot
+![Main dashboard](assets/superset_dashboard.png)
 
-## ER Diagram (placeholder)
-Add your ER diagram to assets/ (e.g., assets/er-diagram.png) and reference it here.
+## ER Diagram
+Current ERD used for the database schema:
+
+![ER Diagram](assets/erd.png)
 
 ## How to run
 
