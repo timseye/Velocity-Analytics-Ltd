@@ -1,21 +1,17 @@
 #!/usr/bin/env python3
-"""
-main.py
-Runs several SQL analytics from queries.sql against the configured PostgreSQL database
-and prints the results to the terminal.
-"""
+"""Run queries in `queries.sql` and export results to CSV in `outputs/`."""
 
 from connection import F1DatabaseConnector
 import os
+import csv
 from typing import List
 
 QUERIES_FILE = os.path.join(os.path.dirname(__file__), "queries.sql")
+OUTPUTS_DIR = os.path.join(os.path.dirname(__file__), "outputs")
 
 
 def load_queries(path: str) -> List[str]:
-    """Load SQL statements from a .sql file, ignoring comment lines starting with --.
-    Splits on semicolons and returns non-empty statements.
-    """
+    """Return SQL statements split by semicolons, skipping `--` lines."""
     if not os.path.exists(path):
         return []
     stmts: List[str] = []
@@ -23,7 +19,6 @@ def load_queries(path: str) -> List[str]:
     with open(path, "r", encoding="utf-8") as f:
         for raw in f:
             line = raw.rstrip("\n")
-            # skip full-line SQL comments
             if line.strip().startswith("--"):
                 continue
             buf.append(line + "\n")
@@ -36,38 +31,41 @@ def load_queries(path: str) -> List[str]:
     tail = "".join(buf).strip()
     if tail:
         stmts.append(tail)
-    # cleanup
     return [s.strip().rstrip(";") + ";" for s in stmts if s and s.strip() != ";"]
 
-
-essential_demo_indices = [0, 1, 2]  # first three queries for demo
-
-
-def run_queries(connector: F1DatabaseConnector, statements: List[str]):
+def run_and_export(connector: F1DatabaseConnector, statements: List[str]):
     if not connector.connection:
         raise RuntimeError("Database connection is not established.")
+    os.makedirs(OUTPUTS_DIR, exist_ok=True)
     cur = connector.connection.cursor()
-    for idx in essential_demo_indices:
-        if idx >= len(statements):
-            break
-        sql = statements[idx]
-        print("\n=== Executing Query #{} ===".format(idx + 1))
-        print(sql)
-        cur.execute(sql)
+    for i, sql in enumerate(statements, start=1):
         try:
-            columns = [d[0] for d in cur.description] if cur.description else []
-            rows = cur.fetchmany(10)
-            if columns:
-                print(" | ".join(columns))
-            for row in rows:
-                print(" | ".join(str(v) for v in row))
-        except Exception:
-            print(f"Affected rows: {cur.rowcount}")
+            cur.execute(sql)
+            if cur.description:
+                cols = [d[0] for d in cur.description]
+                out = os.path.join(OUTPUTS_DIR, f"q{i}.csv")
+                with open(out, "w", newline="", encoding="utf-8") as fh:
+                    w = csv.writer(fh)
+                    w.writerow(cols)
+                    while True:
+                        batch = cur.fetchmany(1000)
+                        if not batch:
+                            break
+                        w.writerows(batch)
+                print(f"Saved: {out}")
+            else:
+                print(f"Query {i} affected rows: {cur.rowcount}")
+        except Exception as e:
+            print(f"Query {i} failed: {e}")
+            try:
+                connector.connection.rollback()
+            except Exception:
+                pass
     cur.close()
 
 
 def main():
-    print("Starting analytics run...")
+    print("Running queries and exporting CSVs...")
     connector = F1DatabaseConnector()
     if not connector.connect():
         print("Failed to connect. Please check your .env settings.")
@@ -77,7 +75,7 @@ def main():
         if not queries:
             print(f"No queries loaded from {QUERIES_FILE}. Ensure the file exists and contains SQL statements.")
             return
-        run_queries(connector, queries)
+        run_and_export(connector, queries)
     finally:
         connector.disconnect()
 

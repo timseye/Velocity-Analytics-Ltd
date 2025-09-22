@@ -44,7 +44,7 @@ ORDER BY ra.year;
 
 -- Q6: Avg pit stop duration (ms) by season
 SELECT ra.year, ROUND(AVG(ps.milliseconds)::numeric, 2) AS avg_pit_ms
-FROM pitstops ps
+FROM pit_stops ps
 JOIN races ra ON ra.raceid = ps.raceid
 GROUP BY ra.year
 ORDER BY ra.year;
