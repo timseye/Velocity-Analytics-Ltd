@@ -44,10 +44,26 @@ py -m pip install -r requirements.txt
 py connection.py
 ```
 
-4) Run sample analytics (executes first queries from `queries.sql`)
+4) Check database structure
+```powershell
+py check_db.py
+```
+
+5) Run sample analytics (executes queries from `queries.sql`)
 ```powershell
 py main.py
 ```
+
+6) Generate visualizations and Excel export (Assignment #2)
+```powershell
+py analytics.py
+```
+
+7) Auto-insert new race results (for Superset demo - Assignment #3)
+```powershell
+py auto_insert.py
+```
+This script inserts new race results every 10 seconds to demonstrate live dashboard updates.
 
 ## Apache Superset (Docker-based)
 If you cloned Superset into `C:\Users\tima\superset` and use Docker Compose:
