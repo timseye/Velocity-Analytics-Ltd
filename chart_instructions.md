@@ -305,3 +305,59 @@ ORDER BY race_count DESC;
     - **SERIES**: Select `circuit_name`.
     - **METRIC**: Select `race_count` with a `SUM` aggregator.
 3.  In the **CUSTOMIZE** tab, give the chart a title.
+
+---
+
+## 12. Data Engineering: DB vs. CSV Comparison
+
+**Chart Type:** Mixed Chart (Line Chart)
+
+**SQL Query for CSV Export:**
+```sql
+SELECT
+    ra.year,
+    ra.round,
+    ra.date,
+    COUNT(r.resultid) AS total_results
+FROM public.races ra
+LEFT JOIN public.results r ON r.raceid = ra.raceid
+WHERE ra.year >= 2020
+GROUP BY ra.year, ra.round, ra.date
+ORDER BY ra.date;
+```
+
+**Configuration Steps:**
+
+1.  **Export CSV from Superset SQL Lab:**
+    *   Go to **SQL Lab**.
+    *   Paste and run the "SQL Query for CSV Export" above.
+    *   Click **"Download as CSV"** and save the file as `results_growth.csv` in your project's `exports` directory (e.g., `C:\Users\tima\Velocity-Analytics-Ltd\exports\results_growth.csv`).
+2.  **Load CSV into Database using Python Script:**
+    *   Open your terminal in the project directory
+    *   Run the Python script I created for you: `py load_csv_to_db.py`
+    *   This will create a new table named `results_growth_csv` in your PostgreSQL database.
+3.  **Add New Table as Dataset in Superset:**
+    *   Go to **Data > Datasets**.
+    *   Click the blue **"+ Dataset"** button.
+    *   Select your **DATABASE** and **SCHEMA (`public`)**.
+    *   For **TABLE**, select the newly created **`results_growth_csv`** table from the dropdown.
+    *   Click **"Add"**.
+4.  **Create Mixed Chart:**
+    *   Go to **Charts > + Chart**.
+    *   For **Dataset**, select your original **`results`** (physical) dataset.
+    *   For **Visualization Type**, choose **"Mixed Chart"**.
+    *   **Configure First Line (from DB - `results` dataset):**
+        *   **Query Mode**: `Aggregate`
+        *   **Time Column**: `date`
+        *   **Metric**: `COUNT(resultid)` (or `total_results` if available)
+        *   **Chart Type**: `Line`
+    *   **Configure Second Line (from CSV - `results_growth_csv` dataset):**
+        *   Look for an option to **"+ Add Metric"** or **"+ Add Layer"** within the Mixed Chart configuration.
+        *   For this new metric/layer, select the **`results_growth_csv`** dataset.
+        *   **Time Column**: `date`
+        *   **Metric**: `COUNT(resultid)` (or `total_results` from the CSV dataset)
+        *   **Chart Type**: `Line`
+    *   Give the chart a clear title (e.g., "Results Growth: DB vs. CSV Comparison").
+    *   Save the chart and add it to a dashboard.
+
+---
