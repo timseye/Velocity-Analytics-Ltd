@@ -1,0 +1,56 @@
+table_name: f5
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: f1
+schema: null
+sql: "SELECT q.position AS qualifying_position, r.position AS race_position\r\nFROM\
+  \ public.qualifying q\r\nJOIN public.results r ON r.raceid = q.raceid AND r.driverid\
+  \ = q.driverid\r\nWHERE q.position IS NOT NULL AND r.position IS NOT NULL;"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: 748b02fb-daaf-485e-b80c-7c6abce29626
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: race_position
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: qualifying_position
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 67113b8f-50a9-4b28-9c19-3475a3227998

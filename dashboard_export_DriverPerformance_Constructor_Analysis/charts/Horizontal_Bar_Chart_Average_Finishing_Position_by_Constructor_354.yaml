@@ -1,0 +1,66 @@
+slice_name: 'Horizontal Bar Chart: Average Finishing Position by Constructor'
+description: null
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_bar
+params:
+  datasource: 30__table
+  viz_type: echarts_timeseries_bar
+  x_axis: constructor
+  metrics:
+  - expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: avg_finish
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: null
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: DECIMAL
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    aggregate: SUM
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: SUM(avg_finish)
+    optionName: metric_ug90hxgu99r_i4y8uktkgk
+  groupby: []
+  adhoc_filters: []
+  row_limit: 1000
+  truncate_metric: true
+  show_empty_columns: true
+  annotation_layers: []
+  orientation: horizontal
+  x_axis_title_margin: 15
+  y_axis_title_margin: 30
+  y_axis_title_position: Left
+  sort_series_type: sum
+  color_scheme: supersetColors
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  x_axis_time_format: smart_date
+  y_axis_format: SMART_NUMBER
+  y_axis_bounds:
+  - null
+  - null
+  truncateXAxis: true
+  rich_tooltip: true
+  showTooltipTotal: true
+  tooltipTimeFormat: smart_date
+  extra_form_data: {}
+  dashboards:
+  - 12
+query_context: '{"datasource":{"id":30,"type":"table"},"force":false,"queries":[{"filters":[],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":[{"columnType":"BASE_AXIS","sqlExpression":"constructor","label":"constructor","expressionType":"SQL"}],"metrics":[{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"avg_finish","description":null,"expression":null,"filterable":true,"groupby":true,"id":null,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"DECIMAL","type_generic":0,"verbose_name":null,"warning_markdown":null},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"SUM(avg_finish)","optionName":"metric_ug90hxgu99r_i4y8uktkgk"}],"orderby":[[{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"avg_finish","description":null,"expression":null,"filterable":true,"groupby":true,"id":null,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"DECIMAL","type_generic":0,"verbose_name":null,"warning_markdown":null},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"SUM(avg_finish)","optionName":"metric_ug90hxgu99r_i4y8uktkgk"},false]],"annotation_layers":[],"row_limit":1000,"series_columns":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"time_offsets":[],"post_processing":[{"operation":"pivot","options":{"index":["constructor"],"columns":[],"aggregates":{"SUM(avg_finish)":{"operator":"mean"}},"drop_missing_columns":false}},{"operation":"flatten"}]}],"form_data":{"datasource":"30__table","viz_type":"echarts_timeseries_bar","x_axis":"constructor","metrics":[{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"avg_finish","description":null,"expression":null,"filterable":true,"groupby":true,"id":null,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"DECIMAL","type_generic":0,"verbose_name":null,"warning_markdown":null},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"SUM(avg_finish)","optionName":"metric_ug90hxgu99r_i4y8uktkgk"}],"groupby":[],"adhoc_filters":[],"row_limit":1000,"truncate_metric":true,"show_empty_columns":true,"annotation_layers":[],"orientation":"horizontal","x_axis_title_margin":15,"y_axis_title_margin":30,"y_axis_title_position":"Left","sort_series_type":"sum","color_scheme":"supersetColors","show_legend":true,"legendType":"scroll","legendOrientation":"top","x_axis_time_format":"smart_date","y_axis_format":"SMART_NUMBER","y_axis_bounds":[null,null],"truncateXAxis":true,"rich_tooltip":true,"showTooltipTotal":true,"tooltipTimeFormat":"smart_date","extra_form_data":{},"dashboards":[12],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 7e2dbe7f-696f-4703-977d-467d5abf9024
+version: 1.0.0
+dataset_uuid: ee228ea3-e386-40e8-8cac-6ca477ec4dee

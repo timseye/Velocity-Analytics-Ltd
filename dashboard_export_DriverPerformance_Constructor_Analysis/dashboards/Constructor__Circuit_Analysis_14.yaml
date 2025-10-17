@@ -1,0 +1,429 @@
+dashboard_title: Constructor & Circuit Analysis
+description: null
+css: ''
+slug: null
+certified_by: ''
+certification_details: ''
+published: true
+uuid: d97512c7-0162-4c82-b1a5-ec2b43c241ba
+position:
+  CHART-ATuIJhrfHrLbWKUr5YURt:
+    children: []
+    id: CHART-ATuIJhrfHrLbWKUr5YURt
+    meta:
+      chartId: 313
+      height: 50
+      sliceName: Top Constructors by Points (2020-2024)
+      uuid: c84d9255-1459-43d5-895a-8fd4ffd05359
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-fvASAV8Mzv3Nw48NQ5LAU
+    type: CHART
+  CHART-BXK9_7uUnD7-pcyuSTOIB:
+    children: []
+    id: CHART-BXK9_7uUnD7-pcyuSTOIB
+    meta:
+      chartId: 362
+      height: 50
+      sliceName: 'Treemap: Constructor Point Contribution'
+      uuid: 59544cc3-5af5-435e-a4b4-ea7fc4b8fa46
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-xcXTCCau1ifvwqUFSSbrc
+    type: CHART
+  CHART-FYH0ubU-GSHTbSe7opbEU:
+    children: []
+    id: CHART-FYH0ubU-GSHTbSe7opbEU
+    meta:
+      chartId: 359
+      height: 50
+      sliceName: 'Geo Map: F1 Circuits Worldwide'
+      uuid: 2d260ddf-99d5-4370-9511-ae6a055dced9
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-fvASAV8Mzv3Nw48NQ5LAU
+    type: CHART
+  CHART-P59k6liUFNALqb6mQhZuY:
+    children: []
+    id: CHART-P59k6liUFNALqb6mQhZuY
+    meta:
+      chartId: 356
+      height: 50
+      sliceName: 'Histogram: Pit Stop Time Distribution (under 60 seconds)'
+      uuid: e6c52a56-ddf4-4adf-99de-d76c30396b25
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-M4RQ2IReEoqK_LfExpSrL
+    type: CHART
+  CHART-Q2NUnYeokJiUyOt0G_RLX:
+    children: []
+    id: CHART-Q2NUnYeokJiUyOt0G_RLX
+    meta:
+      chartId: 314
+      height: 50
+      sliceName: Pit Stop Duration Distribution (2020+)
+      uuid: e4fd8e75-56e9-44b7-b2b4-624d08581afc
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-M4RQ2IReEoqK_LfExpSrL
+    type: CHART
+  CHART-nFAi7I0GpWC_7amovPghy:
+    children: []
+    id: CHART-nFAi7I0GpWC_7amovPghy
+    meta:
+      chartId: 354
+      height: 50
+      sliceName: 'Horizontal Bar Chart: Average Finishing Position by Constructor'
+      uuid: 7e2dbe7f-696f-4703-977d-467d5abf9024
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-xcXTCCau1ifvwqUFSSbrc
+    type: CHART
+  CHART-oVqXMwpQyOS2F9-lFvY8L:
+    children: []
+    id: CHART-oVqXMwpQyOS2F9-lFvY8L
+    meta:
+      chartId: 355
+      height: 50
+      sliceName: 'Line Chart: DNFs per Season'
+      uuid: 39a25d0c-6550-45a8-b5bc-d8af9582129f
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-fvASAV8Mzv3Nw48NQ5LAU
+    type: CHART
+  CHART-tURqyQM1hklkkOh-O_QxE:
+    children: []
+    id: CHART-tURqyQM1hklkkOh-O_QxE
+    meta:
+      chartId: 395
+      height: 50
+      sliceName: 'Word Cloud: Most Frequent Circuits'
+      uuid: ac4025f2-3074-4f17-9d4a-ebd2e67b7688
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-M4RQ2IReEoqK_LfExpSrL
+    type: CHART
+  CHART-vip4xf60BLOnQko75VDvM:
+    children: []
+    id: CHART-vip4xf60BLOnQko75VDvM
+    meta:
+      chartId: 360
+      height: 50
+      sliceName: 'Heatmap: Constructor Performance by Year'
+      uuid: 1bffd29c-59eb-4d10-8eea-3f85dcd93bf6
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-xcXTCCau1ifvwqUFSSbrc
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-xcXTCCau1ifvwqUFSSbrc
+    - ROW-fvASAV8Mzv3Nw48NQ5LAU
+    - ROW-M4RQ2IReEoqK_LfExpSrL
+    - ROW-N-9XCXBWY7
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Constructor & Circuit Analysis
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-M4RQ2IReEoqK_LfExpSrL:
+    children:
+    - CHART-Q2NUnYeokJiUyOt0G_RLX
+    - CHART-P59k6liUFNALqb6mQhZuY
+    - CHART-tURqyQM1hklkkOh-O_QxE
+    id: ROW-M4RQ2IReEoqK_LfExpSrL
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-fvASAV8Mzv3Nw48NQ5LAU:
+    children:
+    - CHART-ATuIJhrfHrLbWKUr5YURt
+    - CHART-oVqXMwpQyOS2F9-lFvY8L
+    - CHART-FYH0ubU-GSHTbSe7opbEU
+    id: ROW-fvASAV8Mzv3Nw48NQ5LAU
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-xcXTCCau1ifvwqUFSSbrc:
+    children:
+    - CHART-BXK9_7uUnD7-pcyuSTOIB
+    - CHART-vip4xf60BLOnQko75VDvM
+    - CHART-nFAi7I0GpWC_7amovPghy
+    id: ROW-xcXTCCau1ifvwqUFSSbrc
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-N-9XCXBWY7:
+    children:
+    - CHART-ZH3ZUE9A
+    id: ROW-N-9XCXBWY7
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+    parents:
+    - ROOT_ID
+    - GRID_ID
+  CHART-ZH3ZUE9A:
+    children: []
+    id: CHART-ZH3ZUE9A
+    meta:
+      chartId: 396
+      height: 50
+      sliceName: 'Results Growth: DB vs. CSV Comparison'
+      uuid: a85f0d6c-8359-4f86-b5ed-3b2e353c3338
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-9XCXBWY7
+metadata:
+  chart_configuration:
+    '313':
+      id: 313
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 314
+        - 354
+        - 355
+        - 356
+        - 359
+        - 360
+        - 362
+        - 395
+    '354':
+      id: 354
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 313
+        - 314
+        - 355
+        - 356
+        - 359
+        - 360
+        - 362
+        - 395
+    '355':
+      id: 355
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 313
+        - 314
+        - 354
+        - 356
+        - 359
+        - 360
+        - 362
+        - 395
+    '362':
+      id: 362
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 313
+        - 314
+        - 354
+        - 355
+        - 356
+        - 359
+        - 360
+        - 395
+  global_chart_configuration:
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    chartsInScope:
+    - 313
+    - 314
+    - 354
+    - 355
+    - 356
+    - 359
+    - 360
+    - 362
+    - 395
+  map_label_colors:
+    SUM(total_points): '#1FA8C9'
+    Alfa Romeo: '#454E7C'
+    AlphaTauri: '#5AC189'
+    Alpine F1 Team: '#FF7F44'
+    Aston Martin: '#666666'
+    Ferrari: '#E04355'
+    Force India: '#FCC700'
+    Haas F1 Team: '#A868B7'
+    Lotus F1: '#3CCCCB'
+    McLaren: '#A38F79'
+    Mercedes: '#8FD3E4'
+    Racing Point: '#A1A6BD'
+    Red Bull: '#ACE1C4'
+    Renault: '#FEC0A1'
+    Sauber: '#B2B2B2'
+    Toro Rosso: '#EFA1AA'
+    Williams: '#FDE380'
+    SUM(avg_finish): '#1FA8C9'
+    SUM(dnfs): '#1FA8C9'
+    pit_stop_seconds: '#1FA8C9'
+    milliseconds: '#1FA8C9'
+    Autodromo Nazionale di Monza: '#1FA8C9'
+    Circuit de Monaco: '#454E7C'
+    Silverstone Circuit: '#5AC189'
+    Circuit de Spa-Francorchamps: '#FF7F44'
+    Circuit Gilles Villeneuve: '#666666'
+    "Aut\xF3dromo Jos\xE9 Carlos Pace": '#E04355'
+    "N\xFCrburgring": '#FCC700'
+    Hungaroring: '#A868B7'
+    Red Bull Ring: '#3CCCCB'
+    Hockenheimring: '#A38F79'
+    Circuit Park Zandvoort: '#8FD3E4'
+    Suzuka Circuit: '#A1A6BD'
+    Circuit de Barcelona-Catalunya: '#ACE1C4'
+    Autodromo Enzo e Dino Ferrari: '#FEC0A1'
+    Albert Park Grand Prix Circuit: '#B2B2B2'
+    "Aut\xF3dromo Hermanos Rodr\xEDguez": '#EFA1AA'
+    Bahrain International Circuit: '#FDE380'
+    Watkins Glen: '#D3B3DA'
+    "Aut\xF3dromo Juan y Oscar G\xE1lvez": '#9EE5E5'
+    Kyalami: '#D1C6BC'
+    Sepang International Circuit: '#454E7C'
+    Indianapolis Motor Speedway: '#5AC189'
+    Circuit de Nevers Magny-Cours: '#FF7F44'
+    Circuit Paul Ricard: '#666666'
+    Yas Marina Circuit: '#E04355'
+    Shanghai International Circuit: '#FCC700'
+    Marina Bay Street Circuit: '#A868B7'
+    Brands Hatch: '#3CCCCB'
+    "Aut\xF3dromo do Estoril": '#A38F79'
+    Circuit of the Americas: '#8FD3E4'
+    Reims-Gueux: '#A1A6BD'
+    Adelaide Street Circuit: '#ACE1C4'
+    Zolder: '#FEC0A1'
+    "Aut\xF3dromo Internacional Nelson Piquet": '#B2B2B2'
+    Istanbul Park: '#EFA1AA'
+    Sochi Autodrom: '#FDE380'
+    Long Beach: '#D3B3DA'
+    Baku City Circuit: '#9EE5E5'
+    Mosport International Raceway: '#D1C6BC'
+    Jarama: '#D1C6BC'
+    Circuito de Jerez: '#454E7C'
+    Detroit Street Circuit: '#5AC189'
+    Dijon-Prenois: '#FF7F44'
+    Scandinavian Raceway: '#666666'
+    Aintree: '#E04355'
+    Jeddah Corniche Circuit: '#FCC700'
+    Korean International Circuit: '#A868B7'
+    Circuit Bremgarten: '#3CCCCB'
+    Valencia Street Circuit: '#A38F79'
+    "Montju\xEFc": '#8FD3E4'
+    Fuji Speedway: '#A1A6BD'
+    Rouen-Les-Essarts: '#ACE1C4'
+    Charade Circuit: '#FEC0A1'
+    Buddh International Circuit: '#B2B2B2'
+    Miami International Autodrome: '#EFA1AA'
+    Prince George Circuit: '#FDE380'
+    Losail International Circuit: '#D3B3DA'
+    Phoenix street circuit: '#9EE5E5'
+    Nivelles-Baulers: '#9EE5E5'
+    Circuit de Pedralbes: '#D1C6BC'
+    Circuito da Boavista: '#454E7C'
+    Las Vegas Strip Street Circuit: '#5AC189'
+    Okayama International Circuit: '#FF7F44'
+    Circuit Mont-Tremblant: '#666666'
+    Las Vegas Street Circuit: '#E04355'
+    "Aut\xF3dromo Internacional do Algarve": '#FCC700'
+    Autodromo Internazionale del Mugello: '#A868B7'
+    Riverside International Raceway: '#3CCCCB'
+    Donington Park: '#A38F79'
+    Pescara Circuit: '#8FD3E4'
+    Fair Park: '#A1A6BD'
+    Le Mans: '#ACE1C4'
+    AVUS: '#FEC0A1'
+    Sebring International Raceway: '#B2B2B2'
+    Monsanto Park Circuit: '#EFA1AA'
+    Zeltweg: '#FDE380'
+    Ain Diab: '#D3B3DA'
+  shared_label_colors:
+  - SUM(total_points)
+  color_scheme: ''
+  refresh_frequency: 0
+  color_scheme_domain: []
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  cross_filters_enabled: true
+  default_filters: '{}'
+  native_filter_configuration:
+  - id: NATIVE_FILTER-wPS0p3hHztLdjdrldSxWT
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    name: year
+    filterType: filter_select
+    targets:
+    - column:
+        name: year
+      datasetUuid: 734cea56-2c34-4b0f-8d78-fc62afbfc088
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      excluded:
+      - 313
+      - 314
+      - 354
+      - 356
+      - 359
+      - 360
+      - 362
+      - 395
+      rootPath:
+      - ROOT_ID
+    type: NATIVE_FILTER
+    description: ''
+version: 1.0.0

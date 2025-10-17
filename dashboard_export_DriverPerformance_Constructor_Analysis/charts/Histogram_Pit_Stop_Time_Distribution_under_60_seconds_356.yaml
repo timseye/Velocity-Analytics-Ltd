@@ -1,0 +1,25 @@
+slice_name: 'Histogram: Pit Stop Time Distribution (under 60 seconds)'
+description: null
+certified_by: null
+certification_details: null
+viz_type: histogram_v2
+params:
+  datasource: 32__table
+  viz_type: histogram_v2
+  column: milliseconds
+  groupby: []
+  adhoc_filters: []
+  row_limit: 100
+  bins: '30'
+  color_scheme: supersetColors
+  show_legend: true
+  x_axis_format: SMART_NUMBER
+  y_axis_format: SMART_NUMBER
+  extra_form_data: {}
+  dashboards:
+  - 12
+query_context: '{"datasource":{"id":32,"type":"table"},"force":false,"queries":[{"filters":[],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":["milliseconds"],"annotation_layers":[],"row_limit":100,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[{"operation":"histogram","options":{"column":"milliseconds","groupby":[],"bins":30}}]}],"form_data":{"datasource":"32__table","viz_type":"histogram_v2","column":"milliseconds","groupby":[],"adhoc_filters":[],"row_limit":100,"bins":"30","color_scheme":"supersetColors","show_legend":true,"x_axis_format":"SMART_NUMBER","y_axis_format":"SMART_NUMBER","extra_form_data":{},"dashboards":[12],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: e6c52a56-ddf4-4adf-99de-d76c30396b25
+version: 1.0.0
+dataset_uuid: 704cb2c7-52f1-467d-8781-b1d533df89d2

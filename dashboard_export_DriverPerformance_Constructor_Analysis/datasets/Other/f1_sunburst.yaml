@@ -1,0 +1,83 @@
+table_name: f1_sunburst
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: f1
+schema: null
+sql: "SELECT\r\n    c.name AS constructor,\r\n    d.forename || ' ' || d.surname AS\
+  \ driver,\r\n    ra.year AS season,\r\n    SUM(r.points) AS total_points\r\nFROM\
+  \ public.results r\r\nJOIN public.drivers d ON d.driverid = r.driverid\r\nJOIN public.constructors\
+  \ c ON c.constructorid = r.constructorid\r\nJOIN public.races ra ON ra.raceid =\
+  \ r.raceid\r\nWHERE ra.year >= 2015 AND r.points > 0\r\nGROUP BY c.name, d.driverid,\
+  \ driver, ra.year\r\nORDER BY ra.year DESC, total_points DESC;"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: 9a950a83-a88d-4a86-b766-87de4677a9c1
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: total_points
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: FLOAT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: season
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: constructor
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: driver
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 67113b8f-50a9-4b28-9c19-3475a3227998

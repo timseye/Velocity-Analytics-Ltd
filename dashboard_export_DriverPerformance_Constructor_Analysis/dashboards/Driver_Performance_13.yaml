@@ -1,0 +1,293 @@
+dashboard_title: Driver Performance
+description: null
+css: ''
+slug: null
+certified_by: ''
+certification_details: ''
+published: true
+uuid: 885d215e-3970-4554-a250-84e44de956be
+position:
+  CHART-8d2OFPDJ-ZFYh7AiOJ-NB:
+    children: []
+    id: CHART-8d2OFPDJ-ZFYh7AiOJ-NB
+    meta:
+      chartId: 235
+      height: 50
+      sliceName: Drivers by nationality
+      uuid: e142d40f-50c4-4cf4-a23a-8aaf74ce9dbe
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-C2cONozMDpWwI1758cNjI
+    type: CHART
+  CHART-OD7KntfS3b61XRWSNEjR2:
+    children: []
+    id: CHART-OD7KntfS3b61XRWSNEjR2
+    meta:
+      chartId: 312
+      height: 50
+      sliceName: Constructor Podiums Distribution Pie (2015-2024)
+      uuid: 284e0a4b-b5e4-4b45-b390-0c4e52c1fbe5
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-C2cONozMDpWwI1758cNjI
+    type: CHART
+  CHART-tCJk18YF3o4GNrrrhaVc1:
+    children: []
+    id: CHART-tCJk18YF3o4GNrrrhaVc1
+    meta:
+      chartId: 361
+      height: 50
+      sliceName: 'Sunburst Chart: Constructor & Driver Hierarchy'
+      uuid: 435ec38f-d749-4e6d-a4c4-2e0f55a9aabb
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-yx8umfpqjScW_OPZvA2Ce
+    type: CHART
+  CHART-wK4UTUy9ypTEZ6ZOD9cpO:
+    children: []
+    id: CHART-wK4UTUy9ypTEZ6ZOD9cpO
+    meta:
+      chartId: 353
+      height: 50
+      sliceName: 'Bar Chart: Top 10 Drivers by Career Points'
+      uuid: e1c7ea95-8404-4ac8-a330-fb943e0df983
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-yx8umfpqjScW_OPZvA2Ce
+    type: CHART
+  CHART-wKz6X-UmM1y0aHjNLv5zc:
+    children: []
+    id: CHART-wKz6X-UmM1y0aHjNLv5zc
+    meta:
+      chartId: 357
+      height: 50
+      sliceName: 'Scatter Plot: Qualifying vs. Race Position'
+      uuid: 73e2a0b4-d879-42a6-a8ac-f0e5a08610ef
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-yx8umfpqjScW_OPZvA2Ce
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-yx8umfpqjScW_OPZvA2Ce
+    - ROW-C2cONozMDpWwI1758cNjI
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Driver Performance
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-C2cONozMDpWwI1758cNjI:
+    children:
+    - CHART-8d2OFPDJ-ZFYh7AiOJ-NB
+    - CHART-OD7KntfS3b61XRWSNEjR2
+    id: ROW-C2cONozMDpWwI1758cNjI
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-yx8umfpqjScW_OPZvA2Ce:
+    children:
+    - CHART-wK4UTUy9ypTEZ6ZOD9cpO
+    - CHART-wKz6X-UmM1y0aHjNLv5zc
+    - CHART-tCJk18YF3o4GNrrrhaVc1
+    id: ROW-yx8umfpqjScW_OPZvA2Ce
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  chart_configuration:
+    '235':
+      id: 235
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 312
+        - 353
+        - 357
+        - 361
+    '312':
+      id: 312
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 235
+        - 353
+        - 357
+        - 361
+    '353':
+      id: 353
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 235
+        - 312
+        - 357
+        - 361
+    '357':
+      id: 357
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 235
+        - 312
+        - 353
+        - 361
+    '361':
+      id: 361
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 235
+        - 312
+        - 353
+        - 357
+  global_chart_configuration:
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    chartsInScope:
+    - 235
+    - 312
+    - 353
+    - 357
+    - 361
+  map_label_colors:
+    SUM(total_points): '#1FA8C9'
+    McLaren: '#454E7C'
+    Stoffel Vandoorne: '#5AC189'
+    2.02k: '#FF7F44'
+    Jenson Button: '#666666'
+    Oscar Piastri: '#E04355'
+    Daniel Ricciardo: '#FCC700'
+    Lando Norris: '#A868B7'
+    Carlos Sainz: '#3CCCCB'
+    Fernando Alonso: '#A38F79'
+    Haas F1 Team: '#8FD3E4'
+    Kevin Magnussen: '#A1A6BD'
+    Romain Grosjean: '#ACE1C4'
+    "Nico H\xFClkenberg": '#FEC0A1'
+    Oliver Bearman: '#B2B2B2'
+    Mick Schumacher: '#EFA1AA'
+    Red Bull: '#FDE380'
+    "Sergio P\xE9rez": '#D3B3DA'
+    Daniil Kvyat: '#9EE5E5'
+    Max Verstappen: '#D1C6BC'
+    Pierre Gasly: '#454E7C'
+    Alexander Albon: '#5AC189'
+    Williams: '#FF7F44'
+    Felipe Massa: '#666666'
+    Valtteri Bottas: '#E04355'
+    Robert Kubica: '#FCC700'
+    Nyck de Vries: '#A868B7'
+    Logan Sargeant: '#3CCCCB'
+    Sergey Sirotkin: '#A38F79'
+    Nicholas Latifi: '#8FD3E4'
+    Franco Colapinto: '#A1A6BD'
+    George Russell: '#ACE1C4'
+    Lance Stroll: '#FEC0A1'
+    Renault: '#B2B2B2'
+    Jolyon Palmer: '#EFA1AA'
+    Esteban Ocon: '#FDE380'
+    Alfa Romeo: '#D3B3DA'
+    Guanyu Zhou: '#9EE5E5'
+    "Kimi R\xE4ikk\xF6nen": '#D1C6BC'
+    Antonio Giovinazzi: '#D1C6BC'
+    Toro Rosso: '#454E7C'
+    Brendon Hartley: '#5AC189'
+    Alpine F1 Team: '#FF7F44'
+    RB F1 Team: '#666666'
+    Liam Lawson: '#E04355'
+    Yuki Tsunoda: '#FCC700'
+    Mercedes: '#A868B7'
+    Lewis Hamilton: '#3CCCCB'
+    Nico Rosberg: '#A38F79'
+    Lotus F1: '#8FD3E4'
+    Pastor Maldonado: '#A1A6BD'
+    AlphaTauri: '#ACE1C4'
+    Aston Martin: '#FEC0A1'
+    Sebastian Vettel: '#B2B2B2'
+    Force India: '#EFA1AA'
+    Racing Point: '#FDE380'
+    Ferrari: '#D3B3DA'
+    Charles Leclerc: '#9EE5E5'
+    Manor Marussia: '#9EE5E5'
+    Pascal Wehrlein: '#D1C6BC'
+    Sauber: '#454E7C'
+    Marcus Ericsson: '#5AC189'
+    Felipe Nasr: '#FF7F44'
+    count: '#1FA8C9'
+    AVG(race_position): '#1FA8C9'
+  shared_label_colors:
+  - Alpine F1 Team
+  - Aston Martin
+  - Ferrari
+  - McLaren
+  - Mercedes
+  - Racing Point
+  - Red Bull
+  - SUM(total_points)
+  - Williams
+  color_scheme: ''
+  refresh_frequency: 0
+  color_scheme_domain: []
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  cross_filters_enabled: true
+  default_filters: '{}'
+  native_filter_configuration:
+  - id: NATIVE_FILTER-khv6qBiLosmQ5OmOtijk5
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    name: driver
+    filterType: filter_select
+    targets:
+    - column:
+        name: driver
+      datasetUuid: 85fe405c-1b02-48da-b789-9daa4c576d81
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      excluded:
+      - 312
+      - 361
+      - 353
+      - 357
+      rootPath:
+      - ROOT_ID
+    type: NATIVE_FILTER
+    description: ''
+version: 1.0.0

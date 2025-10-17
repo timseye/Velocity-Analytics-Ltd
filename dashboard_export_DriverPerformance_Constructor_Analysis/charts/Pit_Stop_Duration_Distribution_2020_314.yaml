@@ -1,0 +1,28 @@
+slice_name: Pit Stop Duration Distribution (2020+)
+description: null
+certified_by: null
+certification_details: null
+viz_type: histogram_v2
+params:
+  datasource: 28__table
+  viz_type: histogram_v2
+  column: pit_stop_seconds
+  groupby: []
+  adhoc_filters: []
+  row_limit: 100
+  bins: 20
+  color_scheme: supersetColors
+  show_legend: true
+  x_axis_title: Pit Stop Duration (seconds)
+  x_axis_format: SMART_NUMBER
+  y_axis_title: Frequency
+  y_axis_format: SMART_NUMBER
+  extra_form_data: {}
+  dashboards:
+  - 12
+query_context: '{"datasource":{"id":28,"type":"table"},"force":false,"queries":[{"filters":[],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":["pit_stop_seconds"],"annotation_layers":[],"row_limit":100,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[{"operation":"histogram","options":{"column":"pit_stop_seconds","groupby":[],"bins":20}}]}],"form_data":{"datasource":"28__table","viz_type":"histogram_v2","column":"pit_stop_seconds","groupby":[],"adhoc_filters":[],"row_limit":100,"bins":20,"color_scheme":"supersetColors","show_legend":true,"x_axis_title":"Pit
+  Stop Duration (seconds)","x_axis_format":"SMART_NUMBER","y_axis_title":"Frequency","y_axis_format":"SMART_NUMBER","extra_form_data":{},"dashboards":[12],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: e4fd8e75-56e9-44b7-b2b4-624d08581afc
+version: 1.0.0
+dataset_uuid: 2d458b3b-7809-43a7-b9f6-c418e22f82ea
