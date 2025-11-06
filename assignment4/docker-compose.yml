@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+
+  # Prometheus (сборщик метрик)
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./config/prometheus.yml:/etc/prometheus/prometheus.yml:ro # Внимание, файл .yml из этой же папки
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.enable-lifecycle'
+    extra_hosts:
+      - "host.docker.internal:host-gateway" # Важно для Custom Exporter
+    networks:
+      - monitoring
+    restart: unless-stopped
+
+  # Grafana (визуализация)
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana_data:/var/lib/grafana
+    depends_on:
+      - prometheus
+    networks:
+      - monitoring
+    restart: unless-stopped
+
+  # Экспортер для PostgreSQL
+  postgres_exporter:
+    image: prometheuscommunity/postgres-exporter:v0.16.0
+    container_name: postgres_exporter
+    ports:
+      - "9187:9187"
+    environment:
+      DATA_SOURCE_NAME: "postgresql://postgres:0000@host.docker.internal:5432/f1?sslmode=disable"
+    networks:
+      - monitoring
+    restart: unless-stopped
+
+  # Экспортер для Системных метрик (ИСПРАВЛЕННАЯ ВЕРСИЯ)
+# Node Exporter (Версия для Windows, как в FAQ 5)
+  node_exporter:
+    image: prom/node-exporter:latest
+    container_name: node_exporter
+    ports: # Оставляем ТОЛЬКО порты
+      - "9100:9100"
+    networks:
+      - monitoring
+    restart: unless-stopped
+
+volumes:
+  prometheus_data:
+  grafana_data:
+
+networks:
+  monitoring:
+    driver: bridge
