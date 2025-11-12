@@ -143,38 +143,39 @@ print_separator(5, "Adding a Plane")
 center = pcd.get_center()
 extent = pcd.get_max_bound() - pcd.get_min_bound()
 
-# Create a plane mesh (horizontal plane below the object)
-plane_width = extent[0] * 1.5
-plane_height = extent[2] * 1.5
+# Create a vertical plane that will cut through the bunny (same as Step 6 clipping plane)
+plane_height = extent[1] * 1.5  # Height of plane
+plane_depth = extent[2] * 1.5   # Depth of plane
 
-# Create plane as a box with very small thickness
+# Create plane as a thin vertical box
 plane = o3d.geometry.TriangleMesh.create_box(
-    width=plane_width, 
-    height=0.005,  # Very thin
-    depth=plane_height)
+    width=0.002,  # Very thin (vertical plane)
+    height=plane_height, 
+    depth=plane_depth)
 
-# Position the plane below the object
+# Position the plane at the center (where the cut will happen in Step 6)
 plane_center = center.copy()
-plane_center[1] = pcd.get_min_bound()[1] - 0.02  # Slightly below the object
+plane_center[0] = center[0]  # At the center X position (cutting plane)
 
 # Translate plane to position
 plane.translate(plane_center - plane.get_center())
 
-# Color the plane green
-plane.paint_uniform_color([0.2, 0.8, 0.2])
+# Color the plane red/orange to show it's a cutting plane
+plane.paint_uniform_color([1.0, 0.3, 0.0])  # Orange-red cutting plane
 plane.compute_vertex_normals()
 
 # Create a copy of point cloud for visualization
 pcd_with_plane = copy.deepcopy(pcd)
 
-print("\nCreated a horizontal plane below the object!")
-print(f"Plane dimensions: {plane_width:.3f} x {plane_height:.3f}")
-print(f"Plane position: {plane_center}")
+print("\nCreated a vertical cutting plane through the object!")
+print(f"Plane dimensions: 0.002 x {plane_height:.3f} x {plane_depth:.3f}")
+print(f"Plane position (center): {plane_center}")
+print("This plane shows where the bunny will be cut in half in Step 6")
 
-print("\nDisplaying object with plane...")
+print("\nDisplaying object with cutting plane...")
 print("(Close the window to continue to Step 6)")
 o3d.visualization.draw_geometries([pcd_with_plane, plane], 
-                                  window_name="Step 5: Object with Plane",
+                                  window_name="Step 5: Object with Cutting Plane",
                                   width=800, height=600)
 
 # STEP 6: Surface Clipping
